@@ -1,0 +1,12 @@
+.cont {
+  margin: 30px auto 0;
+  width: 800px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.nameInput {
+  width: 250px;
+  /* outline: none; */
+  border: 1px solid;
+}

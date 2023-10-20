@@ -1,49 +1,51 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axiosIns from "../../config/axios";
 import Book from "../../components/Book/Book";
 import styles from "./books.module.css"
+import BookFilter from "../../components/BookFilter/BookFilter";
 
 const Books = () => {
-    const [booksData, setBooksData] = useState(null);
+  const [booksData, setBooksData] = useState(null);
 
-    const getBooksData = async (search = "", author_id = "") => {
-        try {
-            let url = "/books?";
-            if (search)
-                url += `title=${search}&`
-            if (author_id) {
-                url += `author_id=${author_id}`
-            }
-            const { data } = await axiosIns.get(url);
-            setBooksData(data);
-        } catch (err) {
-            console.log(err);
-            setBooksData([]);
-        }
-    };
+  const getBooksData = useCallback(async (search = "", authorId = "") => {
+    try {
+      let url = "/books?";
+      if (search)
+        url += `title=${search}&`
+      if (authorId) {
+        url += `author_id=${authorId}`
+      }
+      const { data } = await axiosIns.get(url);
+      setBooksData(data);
+    } catch (err) {
+      console.log(err);
+      setBooksData([]);
+    }
+  });
 
-    useEffect(() => {
-        getBooksData();
-    }, []);
+  useEffect(() => {
+    getBooksData();
+  }, []);
 
-    if (!booksData) return null;
+  if (!booksData) return null;
 
-    return (
-        <>
-            {booksData.length ? (
-                <div className={styles.booksWrapper}>
-                    {booksData.map((bookData, idx) => (
-                        <Book
-                            key={bookData.id}
-                            bookData={bookData}
-                        />
-                    ))}
-                </div>
-            ) : (
-                <span>"No Books Found"</span>
-            )}
-        </>
-    );
+  return (
+    <>
+      <BookFilter getBooksData={getBooksData} />
+      {booksData.length ? (
+        <div className={styles.booksWrapper}>
+          {booksData.map((bookData, idx) => (
+            <Book
+              key={bookData.id}
+              bookData={bookData}
+            />
+          ))}
+        </div>
+      ) : (
+        <p className={styles.noBooks}>No Books Found</p>
+      )}
+    </>
+  );
 };
 
 export default Books;
