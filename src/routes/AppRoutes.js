@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import axiosIns from "../config/axios";
 
-import HomePage from "../pages/home";
-import Books from "../pages/books";
+import HomePage from "../pages/home/home";
+import Books from "../pages/books/books";
 import BookDetails from "../pages/bookDetails";
 import Authors from "../pages/authors";
 import Checkout from "../pages/checkout";
@@ -19,7 +20,7 @@ const AppRoutes = () => {
             }>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/books" element={<Books />} />
-                <Route path="/books/:book-slug" element={<BookDetails />} />
+                <Route path="/books/:bookId" element={<BookDetails />} />
                 <Route path="/authors" element={<Authors />} />
                 <Route path="/checkout" element={<Checkout />} />
             </Route>
