@@ -7,24 +7,28 @@
       "id": 1,
       "name": "Charles",
       "surname": "Dickens",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dickens_Gurney_head.jpg/410px-Dickens_Gurney_head.jpg",
       "books_ids": [1, 2]
     },
     {
       "id": 2,
       "name": "Stephen",
       "surname": "King",
+      "image": "https://i.guim.co.uk/img/media/56be7b100f9704b507dbac33715297ae2f5bd11e/0_491_4024_2414/master/4024.jpg?width=620&dpr=1&s=none",
       "books_ids": [4]
     },
     {
       "id": 3,
       "name": "William",
       "surname": "Shakespeare",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/William_Shakespeare_by_John_Taylor.jpg",
       "books_ids": [3]
     },
     {
       "id": 4,
       "name": "Haruki",
       "surname": "Murakami",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Murakami_Haruki_%282009%29.jpg",
       "books_ids": [5, 6, 7, 8]
     }
   ],
