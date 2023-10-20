@@ -1,0 +1,52 @@
+:root {
+  --font-size-mobile: 50%;
+  --font-size-desktop: 62.5%;
+
+  --font-color-primary: #0e3f6c;
+  --font-color-secondary: #e00646;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "San Francisco", "Segoe UI", "Helvetica Neue",
+    "-apple-system", "BlinkMacSystemFont", "Arial", "sans-serif";
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  font-size: var(--font-size-mobile);
+  --font-size-primary: 8px;
+  --font-size-secondary: 12px;
+  --padding-primary: 0 16px;
+  --margin-primary: 32px 0;
+  --margin-secondary: 20px 0;
+}
+
+.main-container {
+  max-width: 100vw;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+@media screen and (min-width: 601px) {
+  html {
+    font-size: var(--font-size-desktop);
+    --font-size-primary: 10px;
+    --font-size-secondary: 16px;
+    --padding-primary: auto;
+    --margin-primary: 70px 0;
+    --margin-secondary: 45px 0;
+  }
+
+  .main-container {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+}

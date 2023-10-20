@@ -1,0 +1,14 @@
+.cont {
+  background: lightgrey;
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  text-decoration: underline;
+  position: relative;
+}
+.cont > a:last-child {
+  position: absolute;
+  right: 16px;
+  text-decoration: underline;
+}

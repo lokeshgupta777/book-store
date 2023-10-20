@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom"
+import styles from "./Header.module.css"
+
 const Header = () => {
     return (
-        <div>
-            <h1>Header</h1>
-        </div>
+        <header className={styles.cont}>
+            <h1 className={styles.head}>Book Store App</h1>
+            <p className={styles.login}>Login</p>
+        </header>
     )
 }
 
