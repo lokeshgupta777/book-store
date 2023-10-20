@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^1.5.1",
     "json-server": "^0.17.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -8,7 +9,7 @@
     "serve": "^14.2.1"
   },
   "scripts": {
-    "start": "json-server --watch db.json --port 3010 & react-scripts start",
+    "start": "react-scripts start & json-server --watch db.json --port 3010",
     "build": "react-scripts build",
     "serve": "json-server --watch db.json --port 3010 & serve -s build",
     "test": "react-scripts test",
