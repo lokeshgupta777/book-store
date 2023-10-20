@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import styles from "./bookDetails.module.css"
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axiosIns from "../../config/axios";
+import { useCart } from "../../providers/cart";
 
 const BookDetails = () => {
 
   const params = useParams();
-
+  const navigate = useNavigate();
+  const { addBooksToCart, isBookInCart } = useCart();
   const [bookData, setBookData] = useState(undefined);
 
   const fetchBookData = async () => {
@@ -25,7 +27,11 @@ const BookDetails = () => {
   }, [params])
 
   const buyBookHandler = () => {
-
+    if (isBookInCart(bookData?.book_id)) {
+      navigate('/checkout')
+    } else {
+      addBooksToCart([bookData?.book_id])
+    }
   }
 
   if (!params?.bookId)
@@ -61,7 +67,7 @@ const BookDetails = () => {
               <span>ISBN:&nbsp;</span>
               <span>{bookData.isbn}</span>
             </div>
-            <button className={styles.bookButton} onClick={buyBookHandler}>Buy Now</button>
+            <button className={styles.bookButton} onClick={buyBookHandler}>{isBookInCart(bookData?.book_id) ? "Go To Cart" : "Add To Cart"} </button>
           </div>
         </div>
       ) : (
