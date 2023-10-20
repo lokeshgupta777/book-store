@@ -1,0 +1,251 @@
+{
+  "featured_book": {
+    "book_id": 3
+  },
+  "authors": [
+    {
+      "id": 1,
+      "name": "Charles",
+      "surname": "Dickens",
+      "books_ids": [1, 2]
+    },
+    {
+      "id": 2,
+      "name": "Stephen",
+      "surname": "King",
+      "books_ids": [4]
+    },
+    {
+      "id": 3,
+      "name": "William",
+      "surname": "Shakespeare",
+      "books_ids": [3]
+    },
+    {
+      "id": 4,
+      "name": "Haruki",
+      "surname": "Murakami",
+      "books_ids": [5, 6, 7, 8]
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "author_id": 1,
+      "title": "Oliver Twist",
+      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327868529i/18254.jpg",
+      "pages": 234,
+      "releaseDate": "1839",
+      "isbn": "wt345"
+    },
+    {
+      "id": 2,
+      "author_id": 1,
+      "title": "Hard Times",
+      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631982866i/5344.jpg",
+      "pages": 300,
+      "releaseDate": "1854",
+      "isbn": "jk654"
+    },
+    {
+      "id": 3,
+      "author_id": 3,
+      "title": "Hamlet",
+      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1351051208i/1420.jpg",
+      "pages": 160,
+      "releaseDate": "1603",
+      "isbn": "po789"
+    },
+    {
+      "id": 4,
+      "author_id": 2,
+      "title": "IT",
+      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334416842i/830502.jpg",
+      "pages": 500,
+      "releaseDate": "2017",
+      "isbn": "yu098"
+    },
+    {
+      "id": 5,
+      "author_id": 4,
+      "title": "Norwegian Wood",
+      "cover_image": "http://t1.gstatic.com/images?q=tbn:ANd9GcQvJJDi2mzwg9v_PlmKYL31gXIz0kvAObJak7DVFPcD_mJTIyec",
+      "pages": 296,
+      "releaseDate": "1987",
+      "isbn": "hj846"
+    },
+    {
+      "id": 6,
+      "author_id": 4,
+      "title": "Kafka on the Shore",
+      "cover_image": "http://t0.gstatic.com/images?q=tbn:ANd9GcRHFU_j93PPsbQGqoaZJnHH6-Emk_sIxG823SkoRTL0nvdEP41f",
+      "pages": 505,
+      "releaseDate": "2002",
+      "isbn": "op012"
+    },
+    {
+      "id": 7,
+      "author_id": 4,
+      "title": "After Dark",
+      "cover_image": "http://t3.gstatic.com/images?q=tbn:ANd9GcQBMNA8A19vQpNY4bkgadsLhiRUFqBKwKAA6ANrw8VEtOiPrYQJ",
+      "pages": 208,
+      "releaseDate": "2004",
+      "isbn": "cv456"
+    },
+    {
+      "id": 8,
+      "author_id": 4,
+      "title": "1Q84",
+      "cover_image": "http://t0.gstatic.com/images?q=tbn:ANd9GcTBQZSg-b2LFkLlt9fWndS1w8SONabDZBHf0dtdb3-bqcuKxduL",
+      "pages": 928,
+      "releaseDate": "2009",
+      "isbn": "al207"
+    }
+  ],
+  "book_details": [
+    {
+      "id": 1,
+      "book_id": 4,
+      "title": "IT",
+      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334416842i/830502.jpg",
+      "pages": 500,
+      "releaseDate": "2017",
+      "isbn": "yu098",
+
+      "author_id": 2,
+      "author_name": "Stephen",
+      "author_surname": "King",
+      "author_books_ids": [4],
+
+      "desc": "Welcome to Derry, Maine ...\nIt’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real ...\nThey were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But none of them can withstand the force that has drawn them back to Derry to face the nightmare without an end, and the evil without a name"
+    },
+    {
+      "id": 2,
+      "book_id": 3,
+      "title": "Hamlet",
+      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1351051208i/1420.jpg",
+      "pages": 160,
+      "releaseDate": "1603",
+      "isbn": "po789",
+
+      "author_id": 3,
+      "author_name": "William",
+      "author_surname": "Shakespeare",
+      "author_books_ids": [3],
+
+      "desc": "Among Shakespeare's plays, 'Hamlet' is considered by many his masterpiece. Among actors, the role of Hamlet, Prince of Denmark, is considered the jewel in the crown of a triumphant theatrical career."
+    },
+    {
+      "id": 3,
+      "book_id": 1,
+      "title": "Oliver Twist",
+      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327868529i/18254.jpg",
+      "pages": 234,
+      "releaseDate": "1839",
+      "isbn": "wt345",
+
+      "author_id": 1,
+      "author_name": "Charles",
+      "author_surname": "Dickens",
+      "author_books_ids": [1, 2],
+
+      "desc": "A gripping portrayal of London's dark criminal underbelly, published in Penguin Classics with an introduction by Philip Horne."
+    },
+    {
+      "id": 4,
+      "book_id": 2,
+      "title": "Hard Times",
+      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631982866i/5344.jpg",
+      "pages": 300,
+      "releaseDate": "1854",
+      "isbn": "jk654",
+
+      "author_id": 1,
+      "author_name": "Charles",
+      "author_surname": "Dickens",
+      "author_books_ids": [1, 2],
+
+      "desc": "My satire is against those who see figures and averages, and nothing else,' proclaimed Charles Dickens in explaining the theme of this classic novel. Published in 1854, the story concerns one Thomas Gradgrind, a 'fanatic of the demonstrable fact,' who raises his children, Tom and Louisa, in a stifling and arid atmosphere of grim practicality."
+    },
+    {
+      "book_id": 5,
+      "title": "Norwegian Wood",
+      "cover_image": "http://t1.gstatic.com/images?q=tbn:ANd9GcQvJJDi2mzwg9v_PlmKYL31gXIz0kvAObJak7DVFPcD_mJTIyec",
+      "pages": 296,
+      "releaseDate": "1987",
+      "isbn": "hj846",
+
+      "author_id": 4,
+      "author_name": "Haruki",
+      "author_surname": "Murakami",
+      "author_books_ids": [5, 6, 7, 8],
+
+      "desc": "Toru, a quiet and preternaturally serious young college student in Tokyo, is devoted to Naoko, a beautiful and introspective young woman, but their mutual passion is marked by the tragic death of their best friend years before."
+    },
+    {
+      "book_id": 6,
+      "title": "Kafka on the Shore",
+      "cover_image": "http://t0.gstatic.com/images?q=tbn:ANd9GcRHFU_j93PPsbQGqoaZJnHH6-Emk_sIxG823SkoRTL0nvdEP41f",
+      "pages": 505,
+      "releaseDate": "2002",
+      "isbn": "op012",
+
+      "author_id": 4,
+      "author_name": "Haruki",
+      "author_surname": "Murakami",
+      "author_books_ids": [5, 6, 7, 8],
+
+      "desc": "Kafka on the Shore, a tour de force of metaphysical reality, is powered by two remarkable characters: a teenage boy, Kafka Tamura, who runs away from home either to escape a gruesome oedipal prophecy or to search for his long-missing mother and sister."
+    },
+    {
+      "book_id": 7,
+      "title": "After Dark",
+      "cover_image": "http://t3.gstatic.com/images?q=tbn:ANd9GcQBMNA8A19vQpNY4bkgadsLhiRUFqBKwKAA6ANrw8VEtOiPrYQJ",
+      "pages": 208,
+      "releaseDate": "2004",
+      "isbn": "cv456",
+
+      "author_id": 4,
+      "author_name": "Haruki",
+      "author_surname": "Murakami",
+      "author_books_ids": [5, 6, 7, 8],
+
+      "desc": "Nineteen-year-old Mari is waiting out the night in an anonymous Denny’s when she meets a young man who insists he knows her older sister, thus setting her on an odyssey through the sleeping city."
+    },
+    {
+      "book_id": 8,
+      "title": "1Q84",
+      "cover_image": "http://t0.gstatic.com/images?q=tbn:ANd9GcTBQZSg-b2LFkLlt9fWndS1w8SONabDZBHf0dtdb3-bqcuKxduL",
+      "pages": 928,
+      "releaseDate": "2009",
+      "isbn": "al207",
+
+      "author_id": 4,
+      "author_name": "Haruki",
+      "author_surname": "Murakami",
+      "author_books_ids": [5, 6, 7, 8],
+
+      "desc": "A young woman named Aomame follows a taxi driver’s enigmatic suggestion and begins to notice puzzling discrepancies in the world around her. She has entered, she realizes, a parallel existence, which she calls 1Q84 —“Q is for ‘question mark.’"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "user_name": "harry_123",
+      "user_pass": "1234",
+      "books_in_cart": [1, 5],
+      "name": "Harry",
+      "address": "A/32 karol Bagh , New Delhi - 115544",
+      "phone": "8801010101"
+    },
+    {
+      "id": 2,
+      "user_name": "sam_123",
+      "user_pass": "5678",
+      "books_in_cart": [5, 6, 7, 8],
+      "name": "Sam",
+      "address": "Flat No 312, New Friends Colony , New Delhi - 112233",
+      "phone": "9568321548"
+    }
+  ]
+}
