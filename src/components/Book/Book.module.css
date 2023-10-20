@@ -1,0 +1,16 @@
+.bookCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.bookCover {
+  height: 300px;
+  width: 200px;
+}
+
+.bookTitle {
+  color: black;
+  font-size: 16px;
+}
