@@ -1,0 +1,17 @@
+.cont {
+  width: 1000px;
+  margin: 20px auto;
+}
+
+.cont > h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cont > div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+}
