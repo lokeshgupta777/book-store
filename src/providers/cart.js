@@ -74,7 +74,7 @@ const CartProvider = ({ children }) => {
     if (userData?.id) {
       let newBooksIds = userData?.books_in_cart?.filter((book_id) => book_id !== bookId);
       await axiosIns({
-        method: 'post',
+        method: 'patch',
         url: `/users/${userData?.id}`,
         data: {
           books_in_cart: [...newBooksIds]
