@@ -18,6 +18,9 @@
 .bookBrief {
   font-size: 14px;
 }
+.bookBrief > div > span:first-child {
+  font-weight: bold;
+}
 .bookDesc {
   margin-top: 5px;
 }
