@@ -25,7 +25,7 @@ const Header = () => {
       <p className={styles.login} onClick={loginHandler}>{userData?.id ? "Logout" : "Login"}</p>
 
       {loginComponentCalled &&
-        <Suspense fallback={() => "Loading..."}>
+        <Suspense fallback={() => <p>"Loading..."</p>}>
           <LoginComp />
         </Suspense>
       }
