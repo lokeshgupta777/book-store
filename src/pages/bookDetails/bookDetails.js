@@ -30,7 +30,7 @@ const BookDetails = () => {
     if (isBookInCart(bookData?.book_id)) {
       navigate('/checkout')
     } else {
-      addBooksToCart([bookData?.book_id])
+      addBooksToCart([bookData?.book_id], bookData)
     }
   }
 
@@ -65,9 +65,15 @@ const BookDetails = () => {
             </div>
             <div className={styles.bookDetails}>
               <span>ISBN:&nbsp;</span>
-              <span>{bookData.isbn}</span>
+              <span style={{ textTransform: 'uppercase' }}>{bookData.isbn}</span>
             </div>
-            <button className={styles.bookButton} onClick={buyBookHandler}>{isBookInCart(bookData?.book_id) ? "Go To Cart" : "Add To Cart"} </button>
+            <div className={styles.bookDetails}>
+              <span>Price:&nbsp;</span>
+              <span>{bookData?.price}</span>
+            </div>
+            <div>
+              <button className={styles.bookButton} onClick={buyBookHandler}>{isBookInCart(bookData?.book_id) ? "Go To Cart" : "Add To Cart"} </button>
+            </div>
           </div>
         </div>
       ) : (
