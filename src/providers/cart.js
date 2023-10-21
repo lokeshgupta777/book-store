@@ -44,7 +44,7 @@ const CartProvider = ({ children }) => {
     if (userData?.id) {
       let newBooksIdsObj = {}
 
-      booksIdsArr.forEach((bookId) => {
+      booksIdsArr?.forEach((bookId) => {
         newBooksIdsObj[bookId] = true;
       })
 
@@ -100,8 +100,8 @@ const CartProvider = ({ children }) => {
     setUserName("");
     setUserPass("");
     setBooksInCart([]);
-    document.cookie=`user_name=${userName}; path=/; max-age=0`
-    document.cookie=`user_pass=${userPass}; path=/; max-age=0`
+    document.cookie = `user_name=${userName}; path=/; max-age=0`
+    document.cookie = `user_pass=${userPass}; path=/; max-age=0`
   }
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     if (userData?.id) {
       if (booksInCart?.length) {
-        addBooksToCart([userData?.books_in_cart ?? []])
+        addBooksToCart(userData?.books_in_cart ?? [])
       } else {
         fetchCartBooksDetails(userData)
       }
