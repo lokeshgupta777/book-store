@@ -38,6 +38,15 @@ const BookFilter = ({ searchParams, setSearchParams }) => {
   }, [])
 
   useEffect(() => {
+    if (!searchParams?.get('title'))
+      setBookSearchTxt("");
+    if (!searchParams?.get('author_id')) {
+      setAuthorId("")
+      setAuthorName("")
+    }
+  }, [searchParams])
+
+  useEffect(() => {
     if (debounceIntervalId) {
       clearInterval(debounceIntervalId);
       debounceIntervalId = null;
@@ -65,6 +74,7 @@ const BookFilter = ({ searchParams, setSearchParams }) => {
           onChange={(e) => searchTextHandler(e.target.value)}
           placeholder="Enter Full Name (case sensitive)"
           className={styles.nameInput}
+          value={bookSearchTxt}
         />
       </label>
 
