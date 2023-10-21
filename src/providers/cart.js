@@ -6,10 +6,14 @@ import React from "react";
 const CartContext = React.createContext({
   booksInCart: [],
   userData: null,
+  showLogin: false,
   addBooksToCart: () => { },
   removeBookFromCart: () => { },
   isBookInCart: () => { },
   logout: () => { },
+  setUserName: () => { },
+  setUserPass: () => { },
+  setShowLogin: () => { },
 })
 
 const CartProvider = ({ children }) => {
@@ -17,6 +21,7 @@ const CartProvider = ({ children }) => {
   const [userName, setUserName] = useState("");
   const [userPass, setUserPass] = useState("");
   const [userData, setUserData] = useState(null);
+  const [showLogin, setShowLogin] = useState(false);
 
   const getUserData = async (returnUser) => {
     const { data } = await axiosIns.get(`/users?user_name=${userName}&user_pass=${userPass}`);
@@ -58,7 +63,6 @@ const CartProvider = ({ children }) => {
       })
 
       const user = await getUserData(true);
-      console.log(user);
       await fetchCartBooksDetails(user);
     } else {
       if (!booksInCart.some((bookData) => bookData?.book_id === bookDetails?.book_id))
@@ -96,6 +100,8 @@ const CartProvider = ({ children }) => {
     setUserName("");
     setUserPass("");
     setBooksInCart([]);
+    document.cookie=`user_name=${userName}; path=/; max-age=0`
+    document.cookie=`user_pass=${userPass}; path=/; max-age=0`
   }
 
   useEffect(() => {
@@ -122,10 +128,14 @@ const CartProvider = ({ children }) => {
       value={{
         booksInCart,
         userData,
+        showLogin,
         addBooksToCart,
         removeBookFromCart,
         isBookInCart,
         logout,
+        setUserName,
+        setUserPass,
+        setShowLogin,
       }}
     >
       {children}
