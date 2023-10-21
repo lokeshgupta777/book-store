@@ -6,7 +6,7 @@ import HomePage from "../pages/home/home";
 import Books from "../pages/books/books";
 import BookDetails from "../pages/bookDetails/bookDetails";
 import Authors from "../pages/authors/authors";
-import Checkout from "../pages/checkout";
+import Checkout from "../pages/checkout/checkout";
 import Layout from "../layout/layout";
 
 const AppRoutes = () => {

@@ -1,0 +1,48 @@
+.book {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 8px;
+}
+
+.book > img {
+  width: 50px;
+  border-radius: 5px;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.bookInfo > span:first-child {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bookInfo > span:last-child {
+  text-transform: uppercase;
+}
+
+.bookPriceAndRemove {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 14px;
+}
+
+.bookPriceAndRemove > button {
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 13px;
+  background: crimson;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

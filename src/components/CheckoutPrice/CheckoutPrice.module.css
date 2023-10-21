@@ -1,0 +1,15 @@
+.cont {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  height: 40px;
+}
+
+.cont > span:last-child {
+  font-weight: bold;
+  color: darkslategrey;
+}

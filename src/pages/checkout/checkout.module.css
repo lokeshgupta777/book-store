@@ -1,0 +1,20 @@
+.cont {
+  display: flex;
+  gap: 100px;
+  width: 800px;
+  margin: 30px auto;
+}
+
+.cartBooksCont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+}
+.cont > p {
+  margin: auto;
+  font-size: 16px;
+  color: red;
+  font-weight: bold;
+  margin-top: 100px;
+}
