@@ -102,6 +102,12 @@ const Login = () => {
 
   return (
     <dialog id="login-modal">
+      <p
+        className={styles.close}
+        onClick={() => setShowLogin(false)}
+      >
+        close
+      </p>
       <form onSubmit={loginHandler} className={styles.form} autoComplete="off">
         <div className={styles.inputCont}>
           <span>Username:</span>
