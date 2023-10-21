@@ -33,12 +33,25 @@ const Login = () => {
 
   const loginHandler = async (e) => {
     e.preventDefault();
+
+    if (!typedUserName || !typedUserPass) {
+      setErrorMsg("Enter UserName and Password");
+      return;
+    }
+
     try {
       let userData = null;
       if (mode === 'login') {
         const { data } = await axiosIns.get(`/users?user_name=${typedUserName}&user_pass=${typedUserPass}`);
-        userData = data
+        userData = data?.length ? data[0] : {};
       } else {
+        const { data: usersData } = await axiosIns.get(`/users?user_name=${typedUserName}`);
+
+        if (usersData.some((user) => user?.user_name === typedUserName)) {
+          setErrorMsg("UserName already exists");
+          throw new Error("username already exists");
+        }
+
         let newId = getRandomId();
         const { data } = await axiosIns({
           method: "post",
@@ -49,14 +62,14 @@ const Login = () => {
             user_pass: typedUserPass,
           },
         })
-        userData = data
+        userData = data;
       }
 
-      if (userData?.length && userData[0]?.id) {
-        setUserName(userData[0]?.user_name)
-        setUserPass(userData[0]?.user_pass)
-        document.cookie = `user_name=${userData[0]?.user_name}; path=/; max-age=86400`
-        document.cookie = `user_pass=${userData[0]?.user_pass}; path=/; max-age=86400`
+      if (userData?.id) {
+        setUserName(userData?.user_name)
+        setUserPass(userData?.user_pass)
+        document.cookie = `user_name=${userData?.user_name}; path=/; max-age=86400`
+        document.cookie = `user_pass=${userData?.user_pass}; path=/; max-age=86400`
         setShowLogin(false);
       } else {
         setErrorMsg("UserName or password incorrect!");
