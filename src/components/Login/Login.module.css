@@ -37,8 +37,19 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+  text-transform: capitalize;
 }
-.errMsg{
+.errMsg {
   color: red;
   font-size: 14px;
+}
+.mode {
+  position: absolute;
+  font-size: 12px;
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+  bottom: 25px;
+  right: 15px;
+  cursor: pointer;
 }
